@@ -24,7 +24,8 @@ public class controller {
     
     @Autowired IPersonaService ipersonaservice;
     
-    @CrossOrigin(origins = "https://proyectointeg-argprog.web.app")
+    //@CrossOrigin(origins = "https://proyectointeg-argprog.web.app")
+    @CrossOrigin(origins = "proyectointeg-argprog.web.app")
     @GetMapping("/personas/traer")
     public List<Persona> getPersona(){
         return ipersonaservice.getPersona();
