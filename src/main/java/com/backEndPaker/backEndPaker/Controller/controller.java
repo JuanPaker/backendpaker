@@ -24,7 +24,7 @@ public class controller {
     
     @Autowired IPersonaService ipersonaservice;
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://proyectointeg-argprog.web.app")
     @GetMapping("/personas/traer")
     public List<Persona> getPersona(){
         return ipersonaservice.getPersona();
@@ -43,7 +43,7 @@ public class controller {
     }
        
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://proyectointeg-argprog.web.app")
     @PutMapping("/personas/editar/{id}")
     public ResponseEntity<Persona> editarPersona (@PathVariable Long id, 
                                                   @RequestBody Persona perso){
@@ -104,7 +104,7 @@ public class controller {
         return persona;
     }
     */
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://proyectointeg-argprog.web.app")
 @GetMapping("personas/traer/perfil")
     public Persona findPersona(){
         return ipersonaservice.findPersona((long)3);

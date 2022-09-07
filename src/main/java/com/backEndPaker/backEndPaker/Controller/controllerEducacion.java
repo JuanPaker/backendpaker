@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://proyectointeg-argprog.web.app")
 @RestController
 public class controllerEducacion {
     
@@ -39,13 +39,13 @@ public class controllerEducacion {
         return "Educacion eliminada correctamente";
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://proyectointeg-argprog.web.app")
     @GetMapping("educacion/traer/perfil")
     public Educacion eduEducacion(){
         return ieducacionservice.findEducacion((long)3);
     }
     
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = "https://proyectointeg-argprog.web.app")
     @PutMapping("/educacion/editar/{id}")
     public ResponseEntity<Educacion> editarEdu (@PathVariable Long id, 
                                                   @RequestBody Educacion edu){
